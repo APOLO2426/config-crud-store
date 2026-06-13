@@ -1,7 +1,8 @@
 spring:
     cassandra:
         # Apuntamos únicamente al nodo 1 que es el que mapea hacia tu localhost por el puerto 9042
-        contact-points: 127.0.0.1:9042
+        # contact-points: 127.0.0.1:9042
+        contact-points: cassandra-node7:9042
         
         # IMPORTANTE: Verifica el nombre del Data Center. 
         # Por defecto en la imagen oficial de Cassandra suele llamarse "datacenter1" o "dc1"
