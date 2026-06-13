@@ -17,20 +17,20 @@
 #     # 4. Configuración de tiempo de espera
 #     request:
 #       timeout: 5s
-
-cassandra:
-    # Apuntamos únicamente al nodo 1 que es el que mapea hacia tu localhost por el puerto 9042
-    contact-points: 127.0.0.1:9042
-    
-    # IMPORTANTE: Verifica el nombre del Data Center. 
-    # Por defecto en la imagen oficial de Cassandra suele llamarse "datacenter1" o "dc1"
-    # local-datacenter: datacenter1 
-    local-datacenter: DC1 
-    
-    keyspace-name: store  # Coloca aquí el nombre del keyspace que creaste
-    
-    # Credenciales por defecto (si tu contenedor no tiene seguridad activa, puedes omitirlas)
-    username: cassandra
-    password: cassandra
-    request:
-      timeout: 5s
+spring:
+    cassandra:
+        # Apuntamos únicamente al nodo 1 que es el que mapea hacia tu localhost por el puerto 9042
+        contact-points: 127.0.0.1:9042
+        
+        # IMPORTANTE: Verifica el nombre del Data Center. 
+        # Por defecto en la imagen oficial de Cassandra suele llamarse "datacenter1" o "dc1"
+        # local-datacenter: datacenter1 
+        local-datacenter: DC1 
+        
+        keyspace-name: store  # Coloca aquí el nombre del keyspace que creaste
+        
+        # Credenciales por defecto (si tu contenedor no tiene seguridad activa, puedes omitirlas)
+        username: cassandra
+        password: cassandra
+        request:
+          timeout: 5s
